@@ -1,5 +1,6 @@
 package com.douglas.workshopmongo.services;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +23,10 @@ public class PostService {
 		}
 	public Post insert(Post obj) {
 		return repo.insert(obj);
+	}
+	
+	public List<Post> FindByTitle(String text){
+		return repo.findByTitleContainingIgnoreCase(text);
 	}
 	
 }
