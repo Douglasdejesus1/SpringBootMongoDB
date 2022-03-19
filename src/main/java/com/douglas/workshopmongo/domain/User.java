@@ -19,7 +19,7 @@ public class User  implements Serializable{
 	private String email;
 	
 	@DBRef(lazy = true)
-	private List<Post>post = new ArrayList<>();
+	private List<Post>posts = new ArrayList<>();
 	
 	public User(){
 	}
@@ -55,8 +55,8 @@ public class User  implements Serializable{
 		this.email = email;
 	}
 
-	public List<Post> getPost() {
-		return post;
+	public List<Post> getPosts() {
+		return posts;
 	}
 	
 	@Override
